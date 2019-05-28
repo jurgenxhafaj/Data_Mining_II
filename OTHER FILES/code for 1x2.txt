@@ -1,0 +1,146 @@
+df['diff_goals']=df['home_team_goal']-df['away_team_goal']
+df.hist(column='diff_goals', bins=19)
+
+df['diff_goals'].max()
+
+df['diff_goals'].min()
+
+
+# 1 means home team wins, 2 means it's a tie, 3 means away team wins
+
+def betting(dl):
+    if dl > 0.5: return 1
+    elif dl==0: return 2
+    else: return 3
+df["result"] = df['total_goals'].map(betting)
+df.head()
+
+x=np.array([df['stage'], df['B365H'], df['B365D'], df['B365A']])
+y=np.array([df['result']])
+
+
+#scale the units
+
+scaler = MinMaxScaler()
+x=scaler.fit_transform(x)
+
+
+
+new_df=df[['home_team_api_id','away_team_api_id','stage','B365H', 'B365D', 'B365A', 'result']]
+new_df.head()
+
+
+train, test = train_test_split(new_df, test_size=0.2)
+x_train=train.iloc[:, 2:6]
+x_test=test.iloc[:, 2:6]
+y_train=train.iloc[:, 6]
+y_test=test.iloc[:, 6]
+
+
+
+
+def create_model():
+    # create model
+    model = Sequential()
+    model.add(Dense(12, input_dim=4, activation='relu', kernel_initializer="uniform"))
+    model.add(Dense(1, activation='sigmoid', kernel_initializer="uniform"))
+    
+    # Compile model
+    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+    return model
+
+# fix random seed for reproducibility
+seed = 7
+np.random.seed(seed)
+
+# create model
+model = KerasClassifier(build_fn=create_model, epochs=10, batch_size=10, verbose=1)
+
+# evaluate using 10-fold cross validation
+kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=seed)
+results = cross_val_score(model, x_train, y_train, cv=kfold)
+print(results.mean())
+
+
+
+
+#Grid Search
+start = timer()
+
+# define the grid search parameters
+batch_size = [8,10,12]
+epochs = [8,10,12]
+param_grid = dict(batch_size=batch_size, epochs=epochs)
+grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=1, cv=10)
+grid_result = grid.fit(x_train, y_train)
+
+# summarize results
+print("Best: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
+means = grid_result.cv_results_['mean_test_score']
+stds = grid_result.cv_results_['std_test_score']
+params = grid_result.cv_results_['params']
+for mean, stdev, param in zip(means, stds, params):
+    print("%f (%f) with: %r" % (mean, stdev, param))
+    
+end = timer()
+print(end - start)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# define the grid search parameters
+optimizer = ['SGD', 'RMSprop', 'Adagrad', 'Adadelta', 'Adam', 'Adamax', 'Nadam']
+param_grid = dict(optimizer=optimizer)
+grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=-1)
+grid_result = grid.fit(X, Y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+old results
+
+when only taking into account the bets (not including the stage), 
+I got the following results (with 3 fold cross validation)
+
+amount of goals 53% accuracy
+1x2 (W/D/L) 35-36% accuracy
+
+
+Everything after this included the stage column and it was done with  
+10 fold cross validation
+

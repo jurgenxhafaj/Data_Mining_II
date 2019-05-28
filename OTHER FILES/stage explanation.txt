@@ -1,0 +1,2 @@
+Stage - the game number (a team plays 2*(n-1) games where n is nr of teams in championship
+typically championship has 20 teams, so a team plays 2*(20-1)=38 games (stages here)

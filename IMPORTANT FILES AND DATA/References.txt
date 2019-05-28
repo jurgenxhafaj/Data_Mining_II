@@ -1,0 +1,13 @@
+https://jakevdp.github.io/PythonDataScienceHandbook/04.13-geographic-data-with-basemap.html
+https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html
+https://www.analyticsvidhya.com/blog/2017/05/neural-network-from-scratch-in-python-and-r/
+https://medium.com/technology-invention-and-more/how-to-build-a-simple-neural-network-in-9-lines-of-python-code-cc8f23647ca1
+https://stackoverflow.com/questions/42815131/keras-for-implement-convolution-neural-network?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+https://iamtrask.github.io/2015/07/27/python-network-part2/
+https://blogs.oracle.com/meena/simple-neural-network-model-using-keras-and-grid-search-hyperparameterstuning
+https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/
+https://datascience.stackexchange.com/questions/21877/how-to-use-the-output-of-gridsearch?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+https://machinelearningmastery.com/ensemble-machine-learning-algorithms-python-scikit-learn/
+https://machinelearningmastery.com/get-your-hands-dirty-with-scikit-learn-now/
+https://machinelearningmastery.com/how-to-one-hot-encode-sequence-data-in-python/
+DATA: https://www.kaggle.com/hugomathien/soccer ; http://www.football-data.co.uk/data.php 

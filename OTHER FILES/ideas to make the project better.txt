@@ -1,0 +1,30 @@
+add a histogram to give an idea about
+				 the data (total nr of goals in a game)
+
+
+
+additional algorithms
+
+gaussian Naive bayes unscaled + scaled
+
+SVR
+
+SVC
+
+
+for optimization
+SGD (similar to grid search)
+
+
+PCA to find best features for your model
+(also add 
+the plot that looks like sqrt function so audience can easily spot it)
+
+
+
+add a SUMMARY table AT THE TOP OF PROJECT 
+	your methods and 
+	treatments (PCA scaled& unscaled) AND 
+	prediction %
+
+
