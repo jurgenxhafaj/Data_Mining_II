@@ -31,4 +31,6 @@ Other files include my tryouts to fit / validate / grid search models and other 
 NOTE: Unless otherwise noted, the validation method used was 10-fold cross validation.
 On the summary table, the RED and BOLD words show the new changes after every try.
 
+This class was led by Dr. Scott Cook, Tarleton State University.
+
 Author: Jurgen Xhafaj
