@@ -7,11 +7,11 @@ Below is a table of contents with my project files and what they include:
 
 * Main document with summary (aesthetically pleasing) --> Summary of my Project(no code).ipynb
 
-* Actual code used for every step ----------------------> DRAFT - present.ipynb
+* Actual code used for every step --------------------------> DRAFT - present.ipynb
 
-* Summary of my models, Grid Search, etc----------------> accuracy percentages.xlsx
+* Summary of my models, Grid Search, etc-----------------> accuracy percentages.xlsx
 
-* Presentation that was used in class-------------------> Predicting soccer scores for the sake of science.pptx
+* Presentation that was used in class-----------------------> Predicting soccer scores for the sake of science.pptx
 
 (original table was 266Mb and included tons of useless data so I removed a lot)
 
